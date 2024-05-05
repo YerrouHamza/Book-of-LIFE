@@ -4,7 +4,9 @@ function Header() {
   return (
     <header className="bg-theme-champagne">
         <Navbar />
-        <h1>Header</h1>
+        <div className='m-auto max-w-screen-xl'>
+            Header
+        </div>
     </header>
   );
 }
