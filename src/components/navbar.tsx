@@ -19,7 +19,7 @@ const Navbar = () => {
 
         <div className="">
             <Button customClass="mr-5" text='RECENT EPISODES' variant='light' />
-            <Button customClass='' text='SUBSCRIBE' variant='dark' />
+            <Button text='SUBSCRIBE' variant='dark' />
         </div>
     </div>
   );

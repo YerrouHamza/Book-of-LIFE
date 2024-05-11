@@ -3,7 +3,7 @@
 type buttonsPropsType = {
     text: string,
     variant: 'light' | 'dark',
-    customClass: string
+    customClass?: string
 }
 
 const Button = (props: buttonsPropsType) => {
