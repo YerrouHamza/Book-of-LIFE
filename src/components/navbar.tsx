@@ -1,4 +1,5 @@
 import BookOfLifeLogo from '../assets/book-of-life.svg';
+import Button from './button';
 
 const Navbar = () => {
   return (
@@ -17,8 +18,8 @@ const Navbar = () => {
         </nav>
 
         <div className="">
-            <button className='border-2 border-black px-5 py-2 text-black rounded-lg mr-8'>RECENT EPISODES</button>
-            <button className='border-2 border-black bg-black px-5 py-2 text-white rounded-lg'>SUBSCRIBE</button>
+            <Button customClass="mr-5" text='RECENT EPISODES' variant='light' />
+            <Button customClass='' text='SUBSCRIBE' variant='dark' />
         </div>
     </div>
   );
