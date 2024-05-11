@@ -1,8 +1,8 @@
 import BookOfLifeLogo from '../assets/book-of-life.svg';
 
-function Navbar() {
+const Navbar = () => {
   return (
-    <div className="flex justify-between items-center gap-10 max-w-screen-xl m-auto py-10">
+    <div className="flex justify-between items-center gap-10 max-w-screen-xl m-auto px-5">
         <nav className='flex items-center gap-20 w-2/4'>
             <img 
                 src={BookOfLifeLogo}
