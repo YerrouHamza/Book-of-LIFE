@@ -11,9 +11,25 @@ type headerProps = {
 }
 
 const Header = (props: headerProps) => {
+
+  const navbarProps = [
+    {
+      title: 'Home',
+      link: '/'
+    },
+    {
+      title: 'About',
+      link: '/about'
+    },
+    {
+      title: 'Contact',
+      link: '/contact'
+    }
+  ]
+
   return (
     <header className="bg-theme-champagne py-10">
-        {props.isNavbarShow ? <Navbar /> : null}
+        {props.isNavbarShow ? <Navbar pages={navbarProps} /> : null}
         <div className='m-auto max-w-screen-xl mt-10 flex flex-col justify-center items-center'>
 
           {props.title?.first ? 
