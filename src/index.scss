@@ -8,6 +8,27 @@
     padding: 0;
 }
 
+/* liner animation */
+.liner-animtion {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 5px;
+        background: theme('colors.theme-vermillion');
+        transition: width 0.3s ease-in-out;
+        border-bottom-right-radius: 100%;
+    }
+
+    &:hover::before {
+        width: 100%;
+    }
+}
+
 /* Add custom styles below */
 .button-shadow {
     box-shadow: 3px 4px 0px 0px #adadad;
@@ -17,7 +38,6 @@
 .button-shadow:hover {
     box-shadow: 0px 0px 0px 0px #adadad;
 }
-
 
 /* hero svg */
 .hero-svg {

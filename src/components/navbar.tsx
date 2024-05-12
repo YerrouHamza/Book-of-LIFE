@@ -20,7 +20,7 @@ const Navbar = (props: navbarProps) => {
             />
             <ul className='flex justify-between items-center gap-10 font-semibold'>
                 {props.pages.map((page, index) => {
-                    return <li key={index}>
+                    return <li key={index} className='liner-animtion'>
                         <a href={page.link}>{page.title}</a>
                     </li>
                 })}
