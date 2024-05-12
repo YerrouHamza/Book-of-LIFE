@@ -9,7 +9,10 @@ function App() {
 
   return (
     <div className="font-montserrat">
-      <Header title={title} isNavbarShow={true} />
+      <Header
+        title={title}
+        description="We cover all kinds of categories and a weekly special guest."
+        isNavbarShow={true} />
     </div>
   )
 }
