@@ -47,7 +47,7 @@ const Header = (props: headerProps) => {
 
           {props.description ? <p className='text-center text-lg mt-10 mx-auto w-1/3'>{props.description}</p> : null}
           
-          <Button text='SUBSCRIBE' variant='dark' customClass='mx-auto mt-10' />
+          <Button text='SUBSCRIBE' variant='dark' size='lg' customClass='mx-auto mt-10' />
 
           <img className='hero-svg absolute right-3 w-32' src={HeroStar} alt='hero star shape' />
           <img className='hero-svg absolute -left-10 w-60' src={HeroSwirl} alt='hero swirl shape' />

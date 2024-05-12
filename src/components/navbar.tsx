@@ -28,8 +28,8 @@ const Navbar = (props: navbarProps) => {
         </nav>
 
         <div className="">
-            <Button customClass="mr-5" text='RECENT EPISODES' variant='light' />
-            <Button text='SUBSCRIBE' variant='dark' />
+            <Button customClass="mr-5" text='RECENT EPISODES' variant='light' size='md' />
+            <Button text='SUBSCRIBE' variant='dark' size='md' />
         </div>
     </div>
   );
