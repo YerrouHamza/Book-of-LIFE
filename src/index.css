@@ -17,3 +17,10 @@
 .button-shadow:hover {
     box-shadow: 0px 0px 0px 0px #adadad;
 }
+
+
+/* hero svg */
+.hero-svg {
+    top: 50%;
+    transform: translateY(-50%);
+}
