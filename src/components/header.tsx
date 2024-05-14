@@ -1,5 +1,6 @@
 import Navbar from './navbar.tsx';
 import Button from './button.tsx';
+import BooksSlider from './booksSlider.tsx';
 
 // import icons
 import HeroStar from '../assets/shapes/hero-stare.png';
@@ -36,7 +37,7 @@ const Header = (props: headerProps) => {
   return (
     <header className="bg-theme-champagne py-10">
         {props.isNavbarShow && navbarProps.length > 0 ? <Navbar pages={navbarProps} /> : null}
-        <div className='m-auto max-w-screen-xl mt-10 flex flex-col justify-center items-center relative'>
+        <div className='m-auto max-w-screen-xl mt-20 flex flex-col justify-center items-center relative'>
 
           {props.title?.first ? 
             <h1 className='text-center text-7xl font-bold leading-tight'>
@@ -52,6 +53,8 @@ const Header = (props: headerProps) => {
           <img className='hero-svg absolute right-3 w-32' src={HeroStar} alt='hero star shape' />
           <img className='hero-svg absolute -left-10 w-60' src={HeroSwirl} alt='hero swirl shape' />
         </div>
+
+        <BooksSlider />
     </header>
   );
 }
