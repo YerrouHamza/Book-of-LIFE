@@ -1,42 +1,42 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import BookMockups from './bookMockups/bookMockups';
+
 // Import Swiper styles
 import 'swiper/css';
 
-import Book from '../assets/book-cover.png';
+type SwiperSlideProps = {
+    sliders: Array<{
+        cover: string,
+        url: string
+    }>
+}
 
-const BooksSlider = () => {
 
-
+const BooksSlider = (props: SwiperSlideProps) => {
     return (
-        <section className='bg-theme-champagne py-20'>
+        <section className='bg-theme-champagne py-44'>
+
             <Swiper
-                spaceBetween={50}
-                slidesPerView={3}
+                className='mySwiper overflow-visible'
+                spaceBetween={10}
+                slidesPerView={4}
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
                 >
-                <SwiperSlide>
-                    <div className='flex flex-wrap justify-center items-center mt-10'>
-                        <img src={Book} alt='book 1' />
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className='flex flex-wrap justify-center items-center mt-10'>
-                        <img src={Book} alt='book 1' />
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className='flex flex-wrap justify-center items-center mt-10'>
-                        <img src={Book} alt='book 1' />
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className='flex flex-wrap justify-center items-center mt-10'>
-                        <img src={Book} alt='book 1' />
-                    </div>
-                </SwiperSlide>
+                    {
+                        props.sliders.map((slider, index) => {
+                            return <SwiperSlide>
+                                <BookMockups 
+                                    key={index}
+                                    bookCover={slider.cover}
+                                    bookLink={slider.url}
+                                    altBookCover='book cover'
+                                />
+                            </SwiperSlide>
+                        })
+                    }
             </Swiper>
         </section>
 
