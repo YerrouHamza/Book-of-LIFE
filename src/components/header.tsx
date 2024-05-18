@@ -6,10 +6,10 @@ import BooksSlider from './booksSlider.tsx';
 import HeroStar from '../assets/shapes/hero-stare.png';
 import HeroSwirl from '../assets/shapes/Hero-swirl.svg';
 
-import Book from '../assets/cover-test.webp';
-import Book2 from '../assets/cover-test-2.webp';
-import Book3 from '../assets/cover-test-3.jpeg';
-import Book4 from '../assets/cover.png';
+import Book from '../assets/books/cover-test.webp';
+import Book2 from '../assets/books/cover-test-2.webp';
+import Book3 from '../assets/books/cover-test-3.jpeg';
+import Book4 from '../assets/books/cover.png';
 
 
 // Define the props type for the header component
@@ -71,7 +71,7 @@ const Header = (props: headerProps) => {
   return (
     <header className="bg-theme-champagne py-10 overflow-x-hidden">
         {props.isNavbarShow && navbarProps.length > 0 ? <Navbar pages={navbarProps} /> : null}
-        <div className='m-auto max-w-screen-xl mt-20 flex flex-col justify-center items-center relative'>
+        <div className='m-auto mt-20 flex flex-col justify-center items-center relative'>
 
           {props.title?.first ? 
             <h1 className='text-center text-7xl font-bold leading-tight'>
