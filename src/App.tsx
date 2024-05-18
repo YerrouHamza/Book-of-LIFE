@@ -1,24 +1,17 @@
-import Header from "./components/header"
+import { BrowserRouter as Router, Routes, Route  } from "react-router-dom"
+
+import Home from "./pages/home"
+import About from "./pages/about"
 
 function App() {
 
-  const title = {
-    first: 'Your Daily',
-    second: 'Podcast'
-  }
-
   return (
-    <div className="font-montserrat">
-      <Header
-        title={title}
-        description="We cover all kinds of categories and a weekly special guest."
-        isNavbarShow={true}
-      />
-
-      <section className='bg-withe py-20 '>
-        <h1 className=" text-black text-2xl text-center">Read. Get inspired by every minute of it.</h1>
-      </section>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </Router>
   )
 }
 
