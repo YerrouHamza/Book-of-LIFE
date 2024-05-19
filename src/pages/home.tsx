@@ -1,6 +1,9 @@
 // import components
 import Header from "../components/header"
 
+// Element Template
+import SectionTemplate from "../template/sectionBlock"
+
 // import icons
 import Question from '../assets/question.svg'
 import Idea from '../assets/idea.svg'
@@ -22,22 +25,17 @@ const Home = () => {
                 isNavbarShow={true}
             />
 
-            <section className='flex flex-col items-center bg-withe py-20 max-w-screen-xl m-auto'>
-                <h1 className=" text-black text-5xl text-center mb-20 max-w-screen-md m-auto font-semibold">Read. Get inspired by every minute of it.</h1>
 
+            <SectionTemplate title="Read. Get inspired by every minute of it.">
                 <div className="flex justify-center gap-28 md:gap-20 lg:gap-40 flex-wrap md:flex-nowrap px-5 md:px-1 mb-32 md:mx-20 xl:mx-5">
                     <article className="w-full md:w-1/2 flex flex-col justify-center items-center text-center">
                     <img src={Question} alt="Question" />
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente tempora neque et vel, accusamus error fugiat quos nobis modi ipsum.
-                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente tempora neque et vel, accusamus error fugiat quos nobis modi ipsum.</p>
                     </article>
 
                     <article className="w-full md:w-1/2 flex flex-col justify-center items-center text-center">
                     <img src={Idea} alt="Idea" />
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente tempora neque et vel, accusamus error fugiat quos nobis modi ipsum.
-                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente tempora neque et vel, accusamus error fugiat quos nobis modi ipsum.</p>
                     </article>
                 </div>
 
@@ -53,7 +51,13 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </SectionTemplate>
+
+
+            <SectionTemplate title="What our listeners say" description="Their experience throughout every platform" variant="alice">
+                <div className="">
+                </div>
+            </SectionTemplate>
         </div>
     )
 }
