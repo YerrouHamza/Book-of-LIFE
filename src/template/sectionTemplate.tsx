@@ -1,11 +1,13 @@
+import './sectionTemplate.scss'
 
 type SectionTemplateProps = {
     title: string,
+    titleShape?: 'v1' | 'v2' | 'v3' | 'v4',
+    sectionShape?: 'dark' | 'chamagne',
     description?: string,
     variant?: 'champagne' | 'white' | 'alice' | 'pewter',
     children: React.ReactNode
 }
-
 
 const SectionTemplate = (props: SectionTemplateProps) => {
 
@@ -15,10 +17,16 @@ const SectionTemplate = (props: SectionTemplateProps) => {
                     props.variant === 'alice' ? 'bg-theme-alice-blue' :
                     props.variant === 'pewter' ? 'bg-theme-pewter-blue' : '';
 
+    // Create the section shape based on the sectionShape
+    const sectionShape = props.sectionShape !== null ? `section-shape section-shape-${props.sectionShape}` : '';
+    
+    // Create the title shape based on the titleShape
+    const titleShape =  props.titleShape !== null ? `title-shape title-shape-${props.titleShape}` : '';
+
     return (
-        <section className={`flex flex-col items-center bg-withe py-20 max-w-screen-xl m-auto ${variant}`} >
+        <section className={`flex flex-col items-center bg-withe py-20 max-w-screen-xl m-auto ${variant} ${sectionShape}`} >
             <div className="text-black text-center mb-20 max-w-screen-md m-auto">
-                <h1 className="  text-5xl font-semibold">
+                <h1 className={`text-5xl font-semibold ${titleShape}`}>
                     {props.title}
                 </h1>
                 {props.description !== null ? 

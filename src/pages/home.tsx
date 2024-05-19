@@ -2,7 +2,7 @@
 import Header from "../components/header"
 
 // Element Template
-import SectionTemplate from "../template/sectionBlock"
+import SectionTemplate from "../template/sectionTemplate"
 
 // import icons
 import Question from '../assets/question.svg'
@@ -25,8 +25,10 @@ const Home = () => {
                 isNavbarShow={true}
             />
 
-
-            <SectionTemplate title="Read. Get inspired by every minute of it.">
+            <SectionTemplate 
+                title="Read. Get inspired by every minute of it."
+                sectionShape="chamagne"
+            >
                 <div className="flex justify-center gap-28 md:gap-20 lg:gap-40 flex-wrap md:flex-nowrap px-5 md:px-1 mb-32 md:mx-20 xl:mx-5">
                     <article className="w-full md:w-1/2 flex flex-col justify-center items-center text-center">
                     <img src={Question} alt="Question" />
@@ -54,7 +56,13 @@ const Home = () => {
             </SectionTemplate>
 
 
-            <SectionTemplate title="What our listeners say" description="Their experience throughout every platform" variant="alice">
+            <SectionTemplate 
+                title="What our listeners say"
+                description="Their experience throughout every platform"
+                variant="alice"
+                titleShape="v1"
+                sectionShape="dark"
+            >
                 <div className="">
                 </div>
             </SectionTemplate>
