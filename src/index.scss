@@ -33,14 +33,57 @@
 .button-shadow {
     box-shadow: 3px 4px 0px 0px #adadad;
     transition: all 0.3s ease-in-out;
+    
+    &:hover {
+        box-shadow: 0px 0px 0px 0px #adadad;
+    }
 }
 
-.button-shadow:hover {
-    box-shadow: 0px 0px 0px 0px #adadad;
-}
 
 /* hero svg */
 .hero-svg {
     top: 50%;
     transform: translateY(-50%);
+}
+
+/* Quote */
+.quote {
+    position: relative;
+    width: 100%;
+
+    &::after, &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 150px;
+        height: 150px;
+    }
+
+    &::before {
+        left: 0;
+        transform: translate(-50%, 175%);
+        background: url('../src/assets/vector-v2.svg') no-repeat center center;
+        background-size: contain;
+    }
+
+    &::after {
+        right: 0;
+        transform: translate(35%, -35%);
+        background: url('../src/assets/star.png') no-repeat center center;
+        background-size: contain;
+    }
+
+    @media only screen and (max-width: 1400px) {
+        &::before, &::after {
+            width: 100px;
+            height: 100px;
+        }   
+    }
+
+    @media only screen and (max-width: 768px) {
+        &::before, &::after {
+            display: none;
+        }
+        
+    }
 }

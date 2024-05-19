@@ -4,6 +4,8 @@ import Header from "../components/header"
 // import icons
 import Question from '../assets/question.svg'
 import Idea from '../assets/idea.svg'
+import Qoute from '../assets/qoute.svg'
+import User from '../assets/user-1.jpeg'
 
 const Home = () => {
 
@@ -20,10 +22,10 @@ const Home = () => {
                 isNavbarShow={true}
             />
 
-            <section className='bg-withe py-20 max-w-screen-xl m-auto'>
+            <section className='flex flex-col items-center bg-withe py-20 max-w-screen-xl m-auto'>
                 <h1 className=" text-black text-5xl text-center mb-20 max-w-screen-md m-auto font-semibold">Read. Get inspired by every minute of it.</h1>
 
-                <div className="flex justify-center gap-40 flex-wrap md:flex-nowrap px-5 md:px-1 mb-20">
+                <div className="flex justify-center gap-40 flex-wrap md:flex-nowrap px-5 md:px-1 mb-32">
                     <article className="w-full md:w-1/2 flex flex-col justify-center items-center text-center">
                     <img src={Question} alt="Question" />
                     <p>
@@ -39,8 +41,15 @@ const Home = () => {
                     </article>
                 </div>
 
-                <div className="bg-theme-champagne text-center m-auto p-12">
-                    <q className="text-3xl">One of the best daily podcasts that covers every topic on Spotify.</q>
+                <div className="bg-theme-champagne text-center md:mx-20 xl:mx-5">
+                    <div className="quote p-12 xl:p-20">
+                        <img src={Qoute} alt="Star" className="m-auto w-12 xl:w-16 mb-12 xl:mb-16" />
+                        <p className="text-3xl xl:text-4xl font-semibold md:px-20 xl:px-32 mb-16">One of the best daily podcasts that covers every topic on Spotify.</p>
+                        <div className="max-w-[300px] flex justify-center items-center m-auto gap-5">
+                            <img src={User} alt="User" className="w-12 h-12 rounded-full" />
+                            <p className="text-xl">John Doe</p>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
