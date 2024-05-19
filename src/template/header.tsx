@@ -1,6 +1,6 @@
-import Navbar from './navbar.tsx';
-import Button from './button.tsx';
-import BooksSlider from './booksSlider.tsx';
+import Navbar from '../components/navbar.tsx';
+import Button from '../components/button.tsx';
+import BooksSlider from '../components/booksSlider.tsx';
 
 // import icons
 import HeroStar from '../assets/shapes/hero-stare.png';

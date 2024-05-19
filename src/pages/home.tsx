@@ -1,5 +1,5 @@
 // import components
-import Header from "../components/header"
+import Header from "../template/header";
 
 // Element Template
 import SectionTemplate from "../template/sectionTemplate"
