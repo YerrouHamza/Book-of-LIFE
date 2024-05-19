@@ -27,9 +27,8 @@ const BooksSlider = (props: SwiperSlideProps) => {
                 >
                     {
                         props.sliders.map((slider, index) => {
-                            return <SwiperSlide>
+                            return <SwiperSlide key={index}>
                                 <BookMockups 
-                                    key={index}
                                     bookCover={slider.cover}
                                     bookLink={slider.url}
                                     altBookCover='book cover'
