@@ -1,8 +1,22 @@
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import ArrowLeft from '../assets/arrow-left.svg';
+import ArrowRight from '../assets/arrow-right.svg';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
 // import components
 import Header from "../template/header";
+import Card from "../components/card";
 
 // Element Template
-import SectionTemplate from "../template/sectionTemplate"
+import SectionTemplate from "../template/sectionTemplate";
 
 // import icons
 import Question from '../assets/question.svg'
@@ -17,8 +31,47 @@ const Home = () => {
         second: 'Podcast'
     }
 
+    const cards = [
+        {
+            quote: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente tempora neque et vel, accusamus error fugiat quos nobis modi ipsum.",
+            user: "John Doe"
+        },
+        {
+            quote: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente tempora neque et vel, accusamus error fugiat quos nobis modi ipsum.",
+            user: "John Doe"
+
+        },
+        {
+            quote: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente tempora neque et vel, accusamus error fugiat quos nobis modi ipsum.",
+
+            user: "John Doe"
+        },
+        {
+            quote: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente tempora neque et vel, accusamus error fugiat quos nobis modi ipsum.",
+            user: "John Doe"
+        },
+        {
+            quote: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente tempora neque et vel, accusamus error fugiat quos nobis modi ipsum.",
+            user: "John Doe"
+        },
+        {
+            quote: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente tempora neque et vel, accusamus error fugiat quos nobis modi ipsum.",
+            user: "John Doe"
+
+        },
+        {
+            quote: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente tempora neque et vel, accusamus error fugiat quos nobis modi ipsum.",
+
+            user: "John Doe"
+        },
+        {
+            quote: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente tempora neque et vel, accusamus error fugiat quos nobis modi ipsum.",
+            user: "John Doe"
+        },
+    ];
+
     return (
-        <div className="font-montserrat">
+        <div className="font-montserrat overflow-x-hidden overflow-y-visible">
             <Header
                 title={title}
                 description="We cover all kinds of categories and a weekly special guest."
@@ -63,8 +116,44 @@ const Home = () => {
                 titleShape="v1"
                 sectionShape="dark"
             >
-                <div className="">
-                </div>
+
+                <Swiper
+                    // install Swiper modules
+                    modules={[Navigation, Pagination, A11y]}
+                    className='mySwiper overflow-hidden lg:overflow-visible'
+                    spaceBetween={10}
+                    slidesPerView={2.2}
+                    onSlideChange={() => console.log('slide change')}
+                    onSwiper={(swiper) => console.log(swiper)}
+
+                    navigation={{
+                        nextEl: '.custom-next',
+                        prevEl: '.custom-prev',
+                      }}
+                >
+                    {
+                        cards.map((card, index) => {
+                            return <SwiperSlide key={index}>
+                                <Card
+                                    quote={card.quote}
+                                    user={card.user}
+                                />
+                            </SwiperSlide>
+                        })
+                    }
+
+                    {/* Custom Navigation Buttons */}
+                    <div className="sweiber-navigation flex gap-3 mt-10">
+                        <div className="custom-next">
+                            <img src={ArrowLeft} className='w-12 h-12' alt="arrow left" />
+                        </div>
+                        <div className="custom-prev">
+                            <img src={ArrowRight} className='w-12 h-12' alt="arrow right" />
+                        </div>
+                    </div>
+                </Swiper>
+
+                
             </SectionTemplate>
         </div>
     )
